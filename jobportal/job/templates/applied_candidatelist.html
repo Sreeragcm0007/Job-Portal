@@ -1,0 +1,60 @@
+{% load static %}
+{% block body %}
+
+{% include 'recruiter_navigation.html' %}
+
+<style>
+
+ tr{
+ text-align: center;
+ }
+
+
+
+</style>
+
+
+
+ <marquee style="font-family: montserrat; font-size: 25px; color: chartreuse; background-color: darkgreen;">
+    Candidate List
+ </marquee>
+
+<div class="container" style="margin-top:29px;">
+<table class="table table-hover" id="mydata">
+ <thead>
+ <tr style="background-color : #000080; color:white;">
+  <th>S.NO.</th>
+  <th>FullName</th>
+  <th>EmailID</th>
+  <th>Contact No</th>
+  <th>Job Title</th>
+  <th>Company</th>
+   <th>ApplyDate</th>
+  <th>Resume</th>
+ </tr>
+ </thead>
+
+ <tbody>
+ {% for i in data %}
+ {% if request.user.id == i.job.recruiter.user.id %}
+ <tr style="background-color: #DEB887">
+  <td>{{forloop.counter}}</td>
+  <td>{{i.student.user.first_name}} {{i.student.user.last_name}} </td>
+  <td>{{i.student.user.username}}</td>
+  <td>{{i.student.mobile}}</td>
+  <td>{{i.job.title}} </td>
+  <td>{{i.job.recruiter.company}}</td>
+  <td>{{i.applydate}}</td>
+  <td><a href="{{i.resume.url}}">Download Resume</a> </td>
+
+
+ </tr>
+{% endif %}
+
+ {% endfor %}
+ </tbody>
+
+</table>
+ </div>
+
+{% endblock %}

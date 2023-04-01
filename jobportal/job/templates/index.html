@@ -1,0 +1,112 @@
+ {% load static %}
+
+ {% block body %}
+
+ {% include 'navigation.html' %}
+
+ <style>
+.container{
+  max-width: 100%;
+  }
+
+
+
+
+ </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container-fluid" style="margin-top:1%;">
+  <img src="{% static 'images/job2.jpg' %}" style="height:500px; width: 100%;">
+
+ </div>
+
+ <div class="container" style="background-color : cadetblue; height:650px; margin-top: 2%;">
+
+  <h1 class="center text-black ">----------------------------| PLACEMENT PROVIDED BY US |---------------------------</h1>
+
+
+  <div class="row mt-3">
+   <div class="col-md-3">
+    <img src="{% static 'images/student.jpeg' %}" style="width: 100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Neha<br>Placed at KPMG</p>
+
+   </div>
+
+   <div class="col-md-3">
+    <img src="{% static 'images/student2.jpeg' %}" style="width: 100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Tony<br>Placed at HCL</p>
+
+   </div>
+
+
+
+
+   <div class="col-md-3">
+    <img src="{% static 'images/student4.webp' %}" style="width: 100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Sandra<br>Placed at TCL</p>
+
+   </div>
+
+
+
+   <div class="col-md-3">
+    <img src="{% static 'images/student3.webp' %}" style="width: 100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Rosy<br>Placed at MICROSOFT</p>
+
+   </div>
+
+
+
+    <div class="col-md-3">
+    <img src="{% static 'images/student5.jpg' %}" style="width: 100%; margin-top: 5%;  height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Tina<br>Placed at LINKEDIN</p>
+
+   </div>
+
+
+    <div class="col-md-3">
+    <img src="{% static 'images/student6.jpg' %}" style="width: 100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Helly<br>Placed at GOOGLE</p>
+
+   </div>
+
+
+
+     <div class="col-md-3">
+    <img src="{% static 'images/student7.jfif' %}" style="width: 100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Jennifer<br>Placed at AMAZON</p>
+
+   </div>
+
+
+
+     <div class="col-md-3">
+    <img src="{% static 'images/student8.jpg' %}" style="width:100%; margin-top: 5%; height: 200px; ">
+     <p class="container" style="background-color: beige; text-align:center;" >Abraham<br>Placed at APPLE</p>
+
+   </div>
+
+
+
+
+  </div>
+
+
+ </div>
+ {% include 'footer.html' %}
+
+ {% endblock %}
